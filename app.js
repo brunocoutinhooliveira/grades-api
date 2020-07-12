@@ -6,6 +6,8 @@ import { gradeRouter } from './routes/gradeRouter.js';
 import { logger } from './config/logger.js';
 import { db } from './models/index.js';
 
+const app = express();
+
 (async () => {
   try {
     await db.mongoose.connect(db.url, {
@@ -20,13 +22,11 @@ import { db } from './models/index.js';
   }
 })();
 
-const app = express();
-
+// {origin: 'https://front-grade-bruno.herokuapp.com/',}
+app.use(cors());
 //define o dominio de origem para consumo do servico
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-// {origin: 'https://front-grade-bruno.herokuapp.com/',}
-app.use(cors());
 
 app.use(gradeRouter);
 
