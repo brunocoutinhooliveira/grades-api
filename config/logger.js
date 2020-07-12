@@ -25,7 +25,7 @@ const logger = createLogger({
     }),
   ],
   format: format.combine(
-    label({ label: 'grade-api' }),
+    label({ label: 'grades-api' }),
     format.timestamp(),
     myFormat
   ),
