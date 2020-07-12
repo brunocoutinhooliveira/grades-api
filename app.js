@@ -27,7 +27,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(
   cors({
-    origin: 'https://grade-brunoc-back-api.herokuapp.com',
+    origin: 'https://boiling-falls-09659.herokuapp.com',
   })
 );
 
