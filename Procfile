@@ -1,1 +1,1 @@
-web: nodemon -r dotenv/config --experimental-modules app.js
+web: yarn start
